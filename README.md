@@ -3,3 +3,5 @@ Small Frontend Mentor Challenge created using React, Redux Toolkit, RTK Query, a
 Cheers! ![image](https://user-images.githubusercontent.com/98321361/221571928-a42fa00b-50b9-4823-b580-249f83fbe3e1.png)
 
 https://www.youtube.com/watch?v=1Jah8WXzEb0&ab_channel=StefanDev98
+
+![Screenshot (239)](https://user-images.githubusercontent.com/98321361/221572982-5a1804c4-d598-4f8c-aa66-de432339b46c.png)
