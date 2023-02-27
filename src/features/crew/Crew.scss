@@ -1,0 +1,99 @@
+@import "../../style/variables";
+@import "../../style/mixin";
+
+.crew {
+  @include main_content;
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  &__title {
+    margin: 4%;
+    text-transform: uppercase;
+    color: $primaryWhite;
+    font-weight: 400;
+    font-family: $barlowFont;
+
+    &--num {
+      font-weight: 600;
+      margin-right: 5px;
+      color: $primaryGray;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__info {
+    max-width: 420px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &--subtitle {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+
+    &--title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 200;
+      color: $primaryWhite;
+      margin: 30px 0;
+
+      @media (max-width: 480px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    &--description {
+      font-size: 1.1rem;
+      font-family: $barlowFont;
+      text-align: justify;
+      line-height: 2rem;
+    }
+  }
+
+  &__paginate {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--page {
+      font-size: 1.2rem;
+    }
+
+    &--item {
+      margin-top: 20px;
+      color: $primaryGray;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__image {
+    width: 400px;
+    height: 400px;
+
+    @media (max-width: 480px) {
+      width: 300px;
+      height: auto;
+    }
+  }
+}

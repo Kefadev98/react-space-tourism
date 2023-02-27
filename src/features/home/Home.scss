@@ -1,0 +1,69 @@
+@import "../../style/variables";
+@import "../../style/mixin";
+
+.home {
+  @include main_content;
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    background-image: url("../../assets/home/background-home-mobile.jpg");
+  }
+
+  &__explore {
+    width: 220px;
+    height: 220px;
+    font-size: 2rem;
+    font-family: $bellefairFont;
+    color: $darkBlue;
+    background-color: $primaryWhite;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: width 1s, height 1s, transform 1s;
+      background-color: $primaryGray;
+    }
+
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .content {
+    max-width: 450px;
+    margin: 10px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: width 1s, height 1s, transform 1s;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+      font-family: $barlowFont;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      margin: 20px 0;
+      font-size: 7rem;
+      font-weight: 200;
+      color: $primaryWhite;
+    }
+
+    &__description {
+      font-size: 1.1rem;
+      line-height: 2rem;
+      text-align: justify;
+      font-family: $barlowFont;
+    }
+  }
+}

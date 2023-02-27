@@ -1,0 +1,110 @@
+@import "../../style/variables";
+@import "../../style/mixin";
+
+section {
+  @include main_content;
+  background-image: url("../../assets/destination/background-destination-desktop.jpg");
+
+  .space {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+
+    &__title {
+      margin: 4%;
+      text-transform: uppercase;
+      color: $primaryWhite;
+      font-weight: 400;
+      font-family: $barlowFont;
+
+      &--num {
+        font-weight: 600;
+        margin-right: 5px;
+        color: $primaryGray;
+      }
+    }
+
+    .destination {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      &__image {
+        width: 400px;
+        margin: 0 10px;
+        animation: rotation 10s infinite linear;
+
+        @keyframes rotation {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(359deg);
+          }
+        }
+      }
+
+      &__content {
+        max-width: 430px;
+        margin: 10px;
+
+        &--title {
+          font-size: 5rem;
+          font-weight: 2;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+
+        &--description {
+          text-align: justify;
+          font-family: $barlowFont;
+          font-size: 1.1rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      &__navigation {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+
+        &--item {
+          margin-bottom: 10px;
+          font-size: 1.1rem;
+          color: $primaryGray;
+          font-family: $barlowFont;
+          text-transform: uppercase;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          &.active {
+            font-weight: 700;
+            color: $primaryWhite;
+          }
+        }
+      }
+
+      &__information {
+        display: flex;
+        justify-content: space-between;
+
+        &--paragraph {
+          font-size: 1.5rem;
+          color: $primaryWhite;
+        }
+
+        small {
+          font-size: 1.1rem;
+          font-family: $barlowFont;
+        }
+      }
+
+      .line {
+        border: 1px solid $primaryGray;
+        margin: 40px 0;
+      }
+    }
+  }
+}

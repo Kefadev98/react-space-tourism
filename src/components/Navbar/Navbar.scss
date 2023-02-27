@@ -1,0 +1,86 @@
+@import "../../style/variables";
+
+.navbar {
+  width: 100%;
+  height: 96px;
+  margin-top: 20px;
+  position: absolute;
+  color: $primaryWhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    margin: 0 20px;
+  }
+
+  &__list {
+    width: 800px;
+    height: 96px;
+    background-color: $navigationBg;
+    backdrop-filter: blur(2rem);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+
+    &--item {
+      cursor: pointer;
+      font-family: $barlowFont;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .mobile__navbar {
+    width: 100%;
+    height: 100vh;
+    background-color: $navigationBg;
+    backdrop-filter: blur(2rem);
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1;
+
+    .mobile__list {
+      width: 100%;
+      height: 70vh;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      list-style-type: none;
+
+      &--item {
+        font-size: 1.2rem;
+        font-family: $barlowFont;
+        text-transform: uppercase;
+
+        cursor: pointer;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .active__link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .openMenu {
+    margin: 10px;
+  }
+
+  .closeMenu {
+    margin: 30px 20px 20px 20px;
+  }
+}
